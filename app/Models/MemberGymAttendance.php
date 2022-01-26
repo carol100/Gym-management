@@ -22,4 +22,9 @@ class MemberGymAttendance extends Model
     {
         $this->belongsTo(Member::class);
     }
+
+    public function gym_class()
+    {
+        return $this->belongsTo(GymClass::class);
+    }
 }

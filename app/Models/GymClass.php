@@ -17,4 +17,6 @@ class GymClass extends Model
     {
         return Carbon::parse($key)->format('Y-m-d h:i:s');
     }
+
+
 }

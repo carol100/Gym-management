@@ -17,4 +17,9 @@ class GymClassRate extends Model
     {
         return Carbon::parse($key)->format('Y-m-d h:i:s');
     }
+
+    public function gym_class()
+    {
+        $this->belongsTo(GymClass::class);
+    }
 }

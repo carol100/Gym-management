@@ -17,4 +17,8 @@ class MemberPerformanceTrack extends Model
     {
         return Carbon::parse($key)->format('Y-m-d h:i:s');
     }
+
+    public function member(){
+        $this->belongsTo(Member::class);
+    }
 }

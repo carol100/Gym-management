@@ -17,9 +17,9 @@ class CreateGymClassRatesTable extends Migration
             $table->uuid('id')->primary();
             $table->string('gym_class_id')->nullable();
             $table->foreign('gym_class_id')->references('id')->on('gym_classes');
-            $table->string('daily_rates')->nullable();
-            $table->string('weekly_rates')->nullable();
-            $table->string('monthly_rates')->nullable();
+            $table->double('daily_rates')->default(0);
+            $table->double('weekly_rates')->default(0);
+            $table->double('monthly_rates')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
