@@ -21,6 +21,7 @@ class CreateMembersTable extends Migration
             $table->string('date_of_birth')->nullable();
             $table->bigInteger('phone_number')->unique();
             $table->string('email')->unique();
+            $table->string('gender')->unique();
             $table->string('profile_image')->nullable();
             $table->string('password');
             $table->boolean('enabled')->default(false);

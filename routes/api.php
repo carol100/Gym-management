@@ -82,3 +82,24 @@ Route::post('v1/gym-member-create', [\App\Http\Controllers\Api\MemberApiControll
 Route::post('v1/gym-member-edit', [\App\Http\Controllers\Api\MemberApiController::class, 'updateGymMember']);
 Route::post('v1/gym-member-delete', [\App\Http\Controllers\Api\MemberApiController::class, 'deleteGymMember']);
 Route::post('v1/gym-member-search', [\App\Http\Controllers\Api\MemberApiController::class, 'searchAdminGymMember']);
+
+/**
+ *  Gym Member Information API
+ */
+Route::get('v1/get-member-information/{member_id}', [\App\Http\Controllers\Api\GymMemberInfoApiController::class, 'getMemberInformation']);
+Route::get('v1/get-member-information-details/{id}', [\App\Http\Controllers\Api\GymMemberInfoApiController::class, 'getMemberInfoDetails']);
+Route::post('v1/gym-member-info-create', [\App\Http\Controllers\Api\GymMemberInfoApiController::class, 'createGymMemberInfo']);
+Route::post('v1/gym-member-info-edit', [\App\Http\Controllers\Api\GymMemberInfoApiController::class, 'updateGymMemberInfo']);
+Route::post('v1/gym-member-info-delete', [\App\Http\Controllers\Api\GymMemberInfoApiController::class, 'deleteGymMemberInfo']);
+Route::post('v1/gym-member-info-search', [\App\Http\Controllers\Api\GymMemberInfoApiController::class, 'searchAdminGymMemberInfo']);
+
+
+/**
+ *  Gym Member Classes API
+ */
+Route::get('v1/get-member-gym-classes/{member_id}', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'getMemberGymClasses']);
+Route::get('v1/get-member-gym-class-details/{id}', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'getMemberGymClassDetails']);
+Route::post('v1/gym-member-gym-class-create', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'createMemberGymClass']);
+Route::post('v1/gym-member-gym-class-edit', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'updateMemberGymClass']);
+Route::post('v1/gym-member-gym-class-delete', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'deleteMemberGymClass']);
+Route::post('v1/gym-member-gym-class-search', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'searchAdminMemberGymClass']);

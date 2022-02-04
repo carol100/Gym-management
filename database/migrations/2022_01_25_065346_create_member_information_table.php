@@ -18,11 +18,11 @@ class CreateMemberInformationTable extends Migration
             $table->string('member_id')->nullable();
             $table->foreign('member_id')->references('id')->on('members');
             $table->string('initial_weight_kg')->nullable();
-            $table->string('gym_goal')->nullable();
+            $table->string('current_weight_kg')->nullable();
             $table->longText('gym_goal')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
-
         });
     }
 
