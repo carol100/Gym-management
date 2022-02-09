@@ -103,3 +103,33 @@ Route::post('v1/gym-member-gym-class-create', [\App\Http\Controllers\Api\MemberG
 Route::post('v1/gym-member-gym-class-edit', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'updateMemberGymClass']);
 Route::post('v1/gym-member-gym-class-delete', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'deleteMemberGymClass']);
 Route::post('v1/gym-member-gym-class-search', [\App\Http\Controllers\Api\MemberGymClassesApiController::class, 'searchAdminMemberGymClass']);
+
+/**
+ *  Gym Member Performance API
+ */
+Route::get('v1/get-member-gym-performances/{member_id}', [\App\Http\Controllers\Api\GymMemberPerformanceTrackApiController::class, 'getMemberGymPerformanceList']);
+Route::get('v1/get-member-gym-performance-details/{id}', [\App\Http\Controllers\Api\GymMemberPerformanceTrackApiController::class, 'getMemberGymPerformanceDetails']);
+Route::post('v1/gym-member-gym-performance-create', [\App\Http\Controllers\Api\GymMemberPerformanceTrackApiController::class, 'createMemberGymPerformance']);
+Route::post('v1/gym-member-gym-performance-edit', [\App\Http\Controllers\Api\GymMemberPerformanceTrackApiController::class, 'updateMemberGymPerformance']);
+Route::post('v1/gym-member-gym-performance-delete', [\App\Http\Controllers\Api\GymMemberPerformanceTrackApiController::class, 'deleteMemberGymPerformance']);
+Route::post('v1/gym-member-gym-performance-search', [\App\Http\Controllers\Api\GymMemberPerformanceTrackApiController::class, 'searchAdminMemberGymPerformance']);
+
+/**
+ *  Gym Member Attendance API
+ */
+Route::get('v1/get-member-gym-attendances/{member_id}', [\App\Http\Controllers\Api\GymMemberAttendanceApiController::class, 'getMemberGymAttendanceList']);
+Route::get('v1/get-member-gym-attendance-details/{id}', [\App\Http\Controllers\Api\GymMemberAttendanceApiController::class, 'getMemberGymAttendanceDetails']);
+Route::post('v1/gym-member-gym-attendance-create', [\App\Http\Controllers\Api\GymMemberAttendanceApiController::class, 'createMemberGymAttendance']);
+Route::post('v1/gym-member-gym-attendance-edit', [\App\Http\Controllers\Api\GymMemberAttendanceApiController::class, 'updateMemberGymAttendance']);
+Route::post('v1/gym-member-gym-attendance-delete', [\App\Http\Controllers\Api\GymMemberAttendanceApiController::class, 'deleteMemberGymAttendance']);
+Route::post('v1/gym-member-gym-attendance-search', [\App\Http\Controllers\Api\GymMemberAttendanceApiController::class, 'searchAdminMemberGymAttendance']);
+
+/**
+ *  Gym Member Invoices API
+ */
+Route::get('v1/get-member-gym-invoices/{member_id}', [\App\Http\Controllers\Api\GymMemberInvoicesApiController::class, 'getMemberGymInvoicesList']);
+Route::get('v1/get-member-gym-invoice-details/{id}', [\App\Http\Controllers\Api\GymMemberInvoicesApiController::class, 'getMemberGymInvoiceDetails']);
+Route::post('v1/gym-member-gym-invoice-create', [\App\Http\Controllers\Api\GymMemberInvoicesApiController::class, 'createMemberGymInvoice']);
+Route::post('v1/gym-member-gym-invoice-edit', [\App\Http\Controllers\Api\GymMemberInvoicesApiController::class, 'updateMemberGymInvoice']);
+Route::post('v1/gym-member-gym-invoice-delete', [\App\Http\Controllers\Api\GymMemberInvoicesApiController::class, 'deleteMemberGymInvoice']);
+Route::post('v1/gym-member-gym-invoice-search', [\App\Http\Controllers\Api\GymMemberInvoicesApiController::class, 'searchAdminMemberGymInvoice']);

@@ -21,8 +21,10 @@ class CreateMemberGymInvoicesTable extends Migration
             $table->foreign('gym_class_id')->references('id')->on('gym_classes');
             $table->string('gym_trainer_id')->nullable();
             $table->foreign('gym_trainer_id')->references('id')->on('gym_trainers');
-            $table->string('date')->nullable();
-            $table->string('amount_in_ksh')->nullable(); //absent, present, tardy
+            $table->string('invoice_date')->nullable();
+            $table->string('amount_due_in_ksh')->nullable();
+            $table->string('amount_paid_in_ksh')->nullable();
+            $table->string('status')->default('pending'); //pending, cleared, carried_over,
             $table->timestamps();
             $table->softDeletes();
         });
