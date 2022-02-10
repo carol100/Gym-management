@@ -7,13 +7,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-import VCalendar from 'v-calendar';
-
-// Use v-calendar & v-date-picker components
-Vue.use(VCalendar, {
-    componentPrefix: 'vc',
-});
-
 
 /**
  * The following block of code may be used to automatically register your
